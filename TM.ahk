@@ -75,3 +75,7 @@ getNoxPoint(x, y) {
 
   return new Point(x - topLeft.x, y - topLeft.y)
 }
+
+sleepSeconds(seconds) {
+    sleep, seconds * 1000
+}
