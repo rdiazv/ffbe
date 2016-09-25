@@ -16,6 +16,8 @@ F8::
   selectMission()
   sleepSeconds(5)
   selectFirstFriend()
+  sleepSeconds(5)
+  clickDepart()
 }
 
 ;==============================;
@@ -34,6 +36,12 @@ selectFirstFriend() {
   global centerX
 
   clickPoint(centerX, 250)
+}
+
+clickDepart() {
+  global centerX
+
+  clickPoint(centerX, 690)
 }
 
 ;==============================;
