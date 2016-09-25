@@ -20,7 +20,7 @@ CoordMode, ToolTip, Screen
 CoordMode, Mouse, Screen
 MouseGetPos x, y
 
-noxPoint := getNoxPoint(new Point(x, y))
+noxPoint := getNoxPoint(x, y)
 rx := noxPoint.x
 ry := noxPoint.y
 
@@ -35,8 +35,8 @@ class Point {
   }
 }
 
-getNoxPoint(point) {
+getNoxPoint(x, y) {
   global topLeft
 
-  return new Point(point.x - topLeft.x, point.y - topLeft.y)
+  return new Point(x - topLeft.x, y - topLeft.y)
 }
