@@ -18,6 +18,8 @@ F8::
   selectFirstFriend()
   sleepSeconds(5)
   clickDepart()
+  sleepSeconds(15)
+  autoBattle()
 }
 
 ;==============================;
@@ -42,6 +44,10 @@ clickDepart() {
   global centerX
 
   clickPoint(centerX, 690)
+}
+
+autoBattle() {
+  clickPoint(60, 730)
 }
 
 ;==============================;
