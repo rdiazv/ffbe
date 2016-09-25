@@ -9,6 +9,7 @@ CoordMode, Mouse, Screen
 ; Coordenadas de la pantalla del simulador. (x, y)
 topLeft := new Point(440, 35)
 bottomRight := new Point(915, 88)
+centerX := (bottomRight.x - topLeft.x) / 2
 
 F8::
 {
@@ -21,7 +22,9 @@ F8::
 
 ; Selecciona Templo de la Tierra - Entrada
 selectMission() {
-  clickPoint(230, 530)
+  global centerX
+
+  clickPoint(centerX, 530)
 }
 
 ;==============================;
