@@ -20,6 +20,8 @@ F8::
   clickDepart()
   sleepSeconds(15)
   autoBattle()
+  sleepSeconds(90)
+  finishMission()
 }
 
 ;==============================;
@@ -43,6 +45,19 @@ clickDepart() {
 
 autoBattle() {
   clickPoint(60, 730)
+}
+
+clickNext() {
+  global centerX
+  clickPoint(centerX, 690)
+}
+
+finishMission() {
+  clickNext()
+  sleepSeconds(10)
+  clickNext()
+  sleepSeconds(10)
+  clickNext()
 }
 
 ;==============================;
