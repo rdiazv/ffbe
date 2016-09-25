@@ -26,23 +26,18 @@ F8::
 ; Funciones
 ;==============================;
 
-; Selecciona Templo de la Tierra - Entrada
 selectMission() {
   global centerX
-
   clickPoint(centerX, 530)
 }
 
-; Selecciona el primer amigo
 selectFirstFriend() {
   global centerX
-
   clickPoint(centerX, 250)
 }
 
 clickDepart() {
   global centerX
-
   clickPoint(centerX, 690)
 }
 
