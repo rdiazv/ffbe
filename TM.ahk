@@ -14,6 +14,8 @@ centerX := (bottomRight.x - topLeft.x) / 2
 F8::
 {
   selectMission()
+  sleepSeconds(5)
+  selectFirstFriend()
 }
 
 ;==============================;
@@ -25,6 +27,13 @@ selectMission() {
   global centerX
 
   clickPoint(centerX, 530)
+}
+
+; Selecciona el primer amigo
+selectFirstFriend() {
+  global centerX
+
+  clickPoint(centerX, 250)
 }
 
 ;==============================;
