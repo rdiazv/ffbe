@@ -12,12 +12,14 @@ noxPoint := getNoxPoint(x, y)
 rx := noxPoint.x
 ry := noxPoint.y
 
+PixelGetColor, color, %x%, %y%
+
 if (START_TIME = 0) {
-  tooltip (%x% %y%) (%rx% %ry%), 0, 0
+  tooltip (%x% %y%) (%rx% %ry%) %color%, 0, 0
 }
 else {
   seconds := getElapsedSeconds()
-  tooltip (%x% %y%) (%rx% %ry%) %seconds%, 0, 0
+  tooltip (%x% %y%) (%rx% %ry%) %color% %seconds%, 0, 0
 }
 
 return
