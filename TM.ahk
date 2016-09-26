@@ -2,6 +2,24 @@
 
 F8::
 {
+  while (true) {
+    resetElapsedTime()
+    farmTM()
+
+    rechargeTime = NRG_TIME - getElapsedSeconds()
+
+    if (rechargeTime > 0) {
+      sleepSeconds(rechargeTime)
+    }
+  }
+}
+
+F12::Reload
+
+Esc::ExitApp
+
+farmTM()
+{
   selectMission()
   sleepSeconds(5)
   selectFirstFriend()
@@ -12,7 +30,3 @@ F8::
   sleepSeconds(90)
   finishMission()
 }
-
-F12::Reload
-
-Esc::ExitApp
