@@ -24,5 +24,17 @@ getNoxPoint(x, y) {
 }
 
 sleepSeconds(seconds) {
-    sleep, seconds * 1000
+  sleep, seconds * 1000
+}
+
+startTime := A_TickCount
+
+getElapsedSeconds() {
+  global startTime
+  return (A_TickCount - startTime) / 1000
+}
+
+resetElapsedTime() {
+  global startTime
+  startTime := A_TickCount
 }
