@@ -8,10 +8,16 @@ CoordMode, ToolTip, Screen
 CoordMode, Mouse, Screen
 MouseGetPos x, y
 
-seconds := getElapsedSeconds()
 noxPoint := getNoxPoint(x, y)
 rx := noxPoint.x
 ry := noxPoint.y
 
-tooltip (%x% %y%) (%rx% %ry%) %seconds%, 0, 0
+if (START_TIME = 0) {
+  tooltip (%x% %y%) (%rx% %ry%), 0, 0
+}
+else {
+  seconds := getElapsedSeconds()
+  tooltip (%x% %y%) (%rx% %ry%) %seconds%, 0, 0
+}
+
 return
