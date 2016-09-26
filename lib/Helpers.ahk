@@ -27,14 +27,12 @@ sleepSeconds(seconds) {
   sleep, seconds * 1000
 }
 
-startTime := A_TickCount
-
 getElapsedSeconds() {
-  global startTime
-  return (A_TickCount - startTime) / 1000
+  global START_TIME
+  return (A_TickCount - START_TIME) / 1000
 }
 
 resetElapsedTime() {
-  global startTime
-  startTime := A_TickCount
+  global START_TIME
+  START_TIME := A_TickCount
 }

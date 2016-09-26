@@ -5,3 +5,5 @@
 
 SetWorkingDir %A_ScriptDir% ; Ensures a consistent starting directory.
 CoordMode, Mouse, Screen
+
+START_TIME := 0
