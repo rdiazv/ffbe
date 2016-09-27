@@ -6,7 +6,7 @@ F8::
     resetElapsedTime()
     farmTM()
 
-    rechargeTime = NRG_TIME - getElapsedSeconds()
+    rechargeTime := NRG_TIME - getElapsedSeconds()
 
     if (rechargeTime > 0) {
       sleepSeconds(rechargeTime)
