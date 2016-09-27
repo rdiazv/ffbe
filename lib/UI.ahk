@@ -31,3 +31,11 @@ finishMission() {
   sleepSeconds(10)
   clickNext()
 }
+
+isMissionSelection() {
+  global centerX
+  PixelGetColor, topFrame, getScreenX(centerX), getScreenY(233)
+  PixelGetColor, bottomFrame, getScreenX(centerX), getScreenY(328)
+
+  return topFrame = 0x018AA8 && bottomFrame = 0x018EAD
+}
