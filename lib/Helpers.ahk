@@ -52,3 +52,8 @@ resetElapsedTime() {
   global START_TIME
   START_TIME := A_TickCount
 }
+
+setStatusText(status) {
+  global CURRENT_STATUS_TEXT
+  CURRENT_STATUS_TEXT := status
+}

@@ -3,12 +3,14 @@
 F8::
 {
   while (true) {
+    setStatusText("Starting")
     resetElapsedTime()
     farmTM()
 
     rechargeTime := NRG_TIME - getElapsedSeconds()
 
     if (rechargeTime > 0) {
+      setStatusText("Waiting energy recovery...")
       sleepSeconds(rechargeTime)
     }
   }

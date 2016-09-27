@@ -1,9 +1,15 @@
 ; Despliega un tooltip con la posición actual del puntero con respecto
 ; al viewport y a la pantalla del emulador
 
+settimer showStatusTooltip, 0
 settimer showTimeTooltip, 0
 settimer showPositionTooltip, 0
 settimer showColorTooltip, 0
+
+showStatusTooltip:
+CoordMode, ToolTip, Screen
+tooltip %CURRENT_STATUS_TEXT%, 0, 0
+return
 
 showTimeTooltip:
 CoordMode, ToolTip, Screen

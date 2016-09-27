@@ -3,6 +3,8 @@ centerX := (bottomRight.x - topLeft.x) / 2
 selectMission() {
   global centerX
 
+  setStatusText("Waiting mission selection...")
+
   while (!isMissionSelection()) {
     sleepSeconds(5)
   }
@@ -12,6 +14,8 @@ selectMission() {
 
 selectFirstFriend() {
   global centerX
+
+  setStatusText("Waiting friend selection...")
 
   while (!isFriendSelection()) {
     sleepSeconds(5)
@@ -23,6 +27,8 @@ selectFirstFriend() {
 clickDepart() {
   global centerX
 
+  setStatusText("Waiting depart screen...")
+
   while (!isDepartScreen()) {
     sleepSeconds(5)
   }
@@ -31,6 +37,8 @@ clickDepart() {
 }
 
 autoBattle() {
+  setStatusText("Waiting battle screen...")
+
   while (!isBattleScreen()) {
     sleepSeconds(5)
     handleConnectionError()
@@ -42,6 +50,8 @@ autoBattle() {
 clickMissionReport() {
   global centerX
 
+  setStatusText("Waiting mission report...")
+
   while (!isMissionReport()) {
     sleepSeconds(5)
     handleConnectionError()
@@ -52,6 +62,8 @@ clickMissionReport() {
 
 clickCharacterReport() {
   global centerX
+
+  setStatusText("Waiting characters report...")
 
   while (!isCharacterReport()) {
     sleepSeconds(5)
@@ -65,6 +77,8 @@ clickCharacterReport() {
 
 clickRewardsMissionReport() {
   global centerX
+
+  setStatusText("Waiting rewards report...")
 
   while (!isRewardsReport()) {
     sleepSeconds(5)
