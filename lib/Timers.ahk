@@ -5,6 +5,7 @@ settimer showTimeTooltip, 1000
 settimer showPositionTooltip, 0
 settimer showColorTooltip, 0
 settimer handleDailyMissionWindow, 60000
+settimer handleConnectionErrorWindow, 60000
 
 showTimeTooltip:
 CoordMode, ToolTip, Screen
@@ -44,5 +45,11 @@ return
 handleDailyMissionWindow:
 if (isDailyMissionWindow()) {
   dismissDailyMissionWindow()
+}
+return
+
+handleConnectionErrorWindow:
+if (hasConnectionError()) {
+  dismissConnectionError()
 }
 return

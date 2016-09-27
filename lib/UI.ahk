@@ -41,7 +41,6 @@ autoBattle() {
 
   while (!isBattleScreen()) {
     sleepSeconds(5)
-    handleConnectionError()
   }
 
   clickPoint(60, 730)
@@ -54,7 +53,6 @@ clickMissionReport() {
 
   while (!isMissionReport()) {
     sleepSeconds(5)
-    handleConnectionError()
   }
 
   clickPoint(centerX, 690)
@@ -93,12 +91,10 @@ finishMission() {
   clickRewardsMissionReport()
 }
 
-handleConnectionError() {
+dismissConnectionError() {
   global centerX
 
-  if (hasConnectionError()) {
-    clickPoint(centerX, 450)
-  }
+  clickPoint(centerX, 450)
 }
 
 dismissDailyMissionWindow() {
