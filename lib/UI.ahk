@@ -39,3 +39,11 @@ isMissionSelection() {
 
   return topFrame = 0x018AA8 && bottomFrame = 0x018EAD
 }
+
+isFriendSelection() {
+  global centerX
+  PixelGetColor, topFrame, getScreenX(32), getScreenY(224)
+  PixelGetColor, bottomFrame, getScreenX(13), getScreenY(276)
+
+  return topFrame = 0xE8E9E9 && bottomFrame = 0x395150
+}
