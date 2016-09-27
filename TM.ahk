@@ -21,9 +21,7 @@ Esc::ExitApp
 farmTM()
 {
   selectMission()
-  sleepSeconds(5)
   selectFirstFriend()
-  sleepSeconds(5)
   clickDepart()
   sleepSeconds(15)
   autoBattle()

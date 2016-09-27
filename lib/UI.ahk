@@ -2,16 +2,31 @@ centerX := (bottomRight.x - topLeft.x) / 2
 
 selectMission() {
   global centerX
+
+  while (!isMissionSelection()) {
+    sleepSeconds(5)
+  }
+
   clickPoint(centerX, 530)
 }
 
 selectFirstFriend() {
   global centerX
+
+  while (!isFriendSelection()) {
+    sleepSeconds(5)
+  }
+
   clickPoint(centerX, 250)
 }
 
 clickDepart() {
   global centerX
+
+  while (!isDepartScreen()) {
+    sleepSeconds(5)
+  }
+
   clickPoint(centerX, 690)
 }
 
