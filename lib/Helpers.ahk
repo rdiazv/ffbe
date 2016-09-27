@@ -54,6 +54,8 @@ resetElapsedTime() {
 }
 
 setStatusText(status) {
-  global CURRENT_STATUS_TEXT
-  CURRENT_STATUS_TEXT := status
+  CoordMode, ToolTip, Screen
+  tooltip %status%, 0, 0, 1
 }
+
+setStatusText("Stopped")
