@@ -59,3 +59,21 @@ setStatusText(status) {
 }
 
 setStatusText("Stopped")
+
+secondsToTime(seconds) {
+  minutesText := Floor(seconds / 60)
+
+  if (StrLen(minutesText) = 1) {
+    minutesText := "0" . minutesText
+  }
+
+  secondsTime := Mod(seconds, 60)
+
+  if (StrLen(secondsTime) = 1) {
+    secondsTime := "0" . secondsTime
+  }
+
+  FormatTime, time, 0000000000%minutesText%%secondsTime%, mm:ss
+
+  return time
+}

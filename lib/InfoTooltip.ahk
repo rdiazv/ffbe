@@ -9,13 +9,13 @@ showTimeTooltip:
 CoordMode, ToolTip, Screen
 
 if (START_TIME = 0) {
-  tooltip Elapsed time: 0, 0, 20, 2
+  seconds := secondsToTime(0)
 }
 else {
-  seconds := Floor(getElapsedSeconds())
-  tooltip Elapsed time: %seconds%, 0, 20, 2
+  seconds := secondsToTime(Floor(getElapsedSeconds()))
 }
 
+tooltip Elapsed time: %seconds%, 0, 20, 2
 return
 
 showPositionTooltip:
