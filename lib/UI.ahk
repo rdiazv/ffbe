@@ -47,3 +47,11 @@ isFriendSelection() {
 
   return topFrame = 0xE8E9E9 && bottomFrame = 0x395150
 }
+
+isDepartScreen() {
+  global centerX
+  PixelGetColor, topFrame, getScreenX(90), getScreenY(454)
+  PixelGetColor, bottomFrame, getScreenX(90), getScreenY(476)
+
+  return topFrame = 0xDEDEDE && bottomFrame = 0xE1E1E1
+}
