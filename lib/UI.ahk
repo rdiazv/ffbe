@@ -86,10 +86,10 @@ isMissionSelection() {
 }
 
 isFriendSelection() {
-  PixelGetColor, color1, getScreenX(32), getScreenY(224)
-  PixelGetColor, color2, getScreenX(13), getScreenY(276)
+  PixelGetColor, color1, getScreenX(241), getScreenY(234)
+  PixelGetColor, color2, getScreenX(239), getScreenY(362)
 
-  return color1 = 0xE8E9E9 && color2 = 0x395150
+  return color1 = 0x704A00 && color2 = 0x704A00
 }
 
 isDepartScreen() {
