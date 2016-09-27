@@ -23,8 +23,6 @@ farmTM()
   selectMission()
   selectFirstFriend()
   clickDepart()
-  sleepSeconds(15)
   autoBattle()
-  sleepSeconds(90)
   finishMission()
 }
