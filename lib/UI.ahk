@@ -33,6 +33,7 @@ clickDepart() {
 autoBattle() {
   while (!isBattleScreen()) {
     sleepSeconds(5)
+    handleConnectionError()
   }
 
   clickPoint(60, 730)
@@ -43,6 +44,7 @@ clickMissionReport() {
 
   while (!isMissionReport()) {
     sleepSeconds(5)
+    handleConnectionError()
   }
 
   clickPoint(centerX, 690)
@@ -75,6 +77,14 @@ finishMission() {
   clickMissionReport()
   clickCharacterReport()
   clickRewardsMissionReport()
+}
+
+handleConnectionError() {
+  global centerX
+
+  if (hasConnectionError()) {
+    clickPoint(centerX, 450)
+  }
 }
 
 isMissionSelection() {
@@ -126,4 +136,11 @@ isRewardsReport() {
   PixelGetColor, color3, getScreenX(234), getScreenY(677)
 
   return color1 = 0xC1C1C1 && color2 = 0xB5B5B5 && color3 = 0x717171
+}
+
+hasConnectionError() {
+  PixelGetColor, color1, getScreenX(253), getScreenY(497)
+  PixelGetColor, color2, getScreenX(244), getScreenY(449)
+
+  return color1 = 0x280C00 && color2 = 0xFFFFFF
 }
