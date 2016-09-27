@@ -2,4 +2,4 @@
 #Include config/App.ahk
 #Include lib/UI.ahk
 #Include lib/Helpers.ahk
-#Include lib/InfoTooltip.ahk
+#Include lib/Timers.ahk

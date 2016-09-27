@@ -4,6 +4,7 @@
 settimer showTimeTooltip, 1000
 settimer showPositionTooltip, 0
 settimer showColorTooltip, 0
+settimer handleDailyMissionWindow, 60000
 
 showTimeTooltip:
 CoordMode, ToolTip, Screen
@@ -38,4 +39,10 @@ MouseGetPos x, y
 PixelGetColor, color, %x%, %y%
 
 tooltip Color: %color%, 0, 60, 4
+return
+
+handleDailyMissionWindow:
+if (isDailyMissionWindow()) {
+  dismissDailyMissionWindow()
+}
 return

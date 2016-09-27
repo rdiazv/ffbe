@@ -101,6 +101,10 @@ handleConnectionError() {
   }
 }
 
+dismissDailyMissionWindow() {
+  clickPoint(125, 524)
+}
+
 isMissionSelection() {
   global centerX
   PixelGetColor, color1, getScreenX(centerX), getScreenY(233)
@@ -150,6 +154,13 @@ isRewardsReport() {
   PixelGetColor, color3, getScreenX(234), getScreenY(677)
 
   return color1 = 0xC1C1C1 && color2 = 0xB5B5B5 && color3 = 0x717171
+}
+
+isDailyMissionWindow() {
+  PixelGetColor, color1, getScreenX(202), getScreenY(195)
+  PixelGetColor, color2, getScreenX(233), getScreenY(604)
+
+  return color1 = 0xB0C001 && color2 = 0xD1E700
 }
 
 hasConnectionError() {
