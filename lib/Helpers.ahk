@@ -11,16 +11,32 @@ clickPoint(x, y) {
   MouseClick, left, point.x, point.y, 1, 0
 }
 
-getScreenPoint(x, y) {
+getScreenX(x) {
   global topLeft
+  return x + topLeft.x
+}
 
-  return new Point(x + topLeft.x, y + topLeft.y)
+getScreenY(y) {
+  global topLeft
+  return y + topLeft.y
+}
+
+getScreenPoint(x, y) {
+  return new Point(getScreenX(x), getScreenY(y))
+}
+
+getNoxX(x) {
+  global topLeft
+  return x - topLeft.x
+}
+
+getNoxY(y) {
+  global topLeft
+  return y - topLeft.y
 }
 
 getNoxPoint(x, y) {
-  global topLeft
-
-  return new Point(x - topLeft.x, y - topLeft.y)
+  return new Point(getNoxX(x), getNoxY(y))
 }
 
 sleepSeconds(seconds) {
