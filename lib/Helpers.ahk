@@ -48,9 +48,18 @@ getElapsedSeconds() {
   return (A_TickCount - START_TIME) / 1000
 }
 
+getElapsedGlobalSeconds() {
+  global GLOBAL_START_TIME
+  return (A_TickCount - GLOBAL_START_TIME) / 1000
+}
+
 resetElapsedTime() {
-  global START_TIME
+  global START_TIME, GLOBAL_START_TIME
   START_TIME := A_TickCount
+
+  if (GLOBAL_START_TIME = 0) {
+    GLOBAL_START_TIME := A_TickCount
+  }
 }
 
 setStatusText(status) {

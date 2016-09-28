@@ -8,3 +8,4 @@ CoordMode, Mouse, Screen
 
 NRG_TIME := 300
 START_TIME := 0
+GLOBAL_START_TIME := 0
