@@ -9,7 +9,10 @@ selectMission() {
     sleepSeconds(5)
   }
 
-  clickPoint(centerX, 530)
+  while (isMissionSelection()) {
+    clickPoint(centerX, 530)
+    sleepSeconds(5)
+  }
 }
 
 selectFirstFriend() {
@@ -21,7 +24,10 @@ selectFirstFriend() {
     sleepSeconds(5)
   }
 
-  clickPoint(centerX, 250)
+  while (isFriendSelection()) {
+    clickPoint(centerX, 250)
+    sleepSeconds(5)
+  }
 }
 
 clickDepart() {
@@ -33,7 +39,10 @@ clickDepart() {
     sleepSeconds(5)
   }
 
-  clickPoint(centerX, 690)
+  while (isDepartScreen()) {
+    clickPoint(centerX, 690)
+    sleepSeconds(5)
+  }
 }
 
 autoBattle() {
@@ -43,7 +52,10 @@ autoBattle() {
     sleepSeconds(5)
   }
 
-  clickPoint(60, 730)
+  while (isBattleScreen()) {
+    clickPoint(60, 730)
+    sleepSeconds(5)
+  }
 }
 
 clickMissionReport() {
@@ -55,7 +67,10 @@ clickMissionReport() {
     sleepSeconds(5)
   }
 
-  clickPoint(centerX, 690)
+  while (isMissionReport()) {
+    clickPoint(centerX, 690)
+    sleepSeconds(5)
+  }
 }
 
 clickCharacterReport() {
@@ -82,13 +97,10 @@ clickRewardsMissionReport() {
     sleepSeconds(5)
   }
 
-  clickPoint(centerX, 690)
-}
-
-finishMission() {
-  clickMissionReport()
-  clickCharacterReport()
-  clickRewardsMissionReport()
+  while (isRewardsReport()) {
+    clickPoint(centerX, 690)
+    sleepSeconds(5)
+  }
 }
 
 dismissConnectionError() {
