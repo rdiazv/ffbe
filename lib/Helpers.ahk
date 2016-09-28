@@ -70,7 +70,13 @@ setStatusText(status) {
 setStatusText("Stopped")
 
 secondsToTime(seconds) {
-  minutesText := Floor(seconds / 60)
+  hoursText := Floor(seconds / 3600)
+
+  if (StrLen(hoursText) = 1) {
+    hoursText := "0" . hoursText
+  }
+
+  minutesText := Floor(Mod(seconds, 3600) / 60)
 
   if (StrLen(minutesText) = 1) {
     minutesText := "0" . minutesText
@@ -82,7 +88,5 @@ secondsToTime(seconds) {
     secondsTime := "0" . secondsTime
   }
 
-  FormatTime, time, 0000000000%minutesText%%secondsTime%, mm:ss
-
-  return time
+  return hoursText . ":" . minutesText . ":" . secondsTime
 }
