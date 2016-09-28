@@ -26,5 +26,7 @@ farmTM()
   selectFirstFriend()
   clickDepart()
   autoBattle()
-  finishMission()
+  clickMissionReport()
+  clickCharacterReport()
+  clickRewardsMissionReport()
 }
