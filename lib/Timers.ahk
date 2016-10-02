@@ -18,7 +18,7 @@ else {
   seconds := secondsToTime(Floor(getElapsedSeconds()))
 }
 
-tooltip Elapsed time: %seconds%, 0, 20, 2
+setTooltip("Elapsed time: " . seconds, 2)
 return
 
 showGlobalTimeTooltip:
@@ -31,7 +31,7 @@ else {
   seconds := secondsToTime(Floor(getElapsedGlobalSeconds()))
 }
 
-tooltip Global time: %seconds%, 0, 40, 3
+setTooltip("Global time: " . seconds, 3)
 return
 
 showPositionTooltip:
@@ -43,7 +43,7 @@ noxPoint := getNoxPoint(x, y)
 rx := noxPoint.x
 ry := noxPoint.y
 
-tooltip Screen: (%x% %y%) | Nox: (%rx% %ry%), 0, 60, 4
+setTooltip("Screen: (" . x . " " . y . ") | Nox: (" . rx . " " . ry . ")", 4)
 return
 
 showColorTooltip:
@@ -53,7 +53,7 @@ MouseGetPos x, y
 
 PixelGetColor, color, %x%, %y%
 
-tooltip Color: %color%, 0, 80, 5
+setTooltip("Color: " . color, 5)
 return
 
 handleDailyMissionWindow:

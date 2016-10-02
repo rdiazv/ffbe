@@ -64,7 +64,7 @@ resetElapsedTime() {
 
 setStatusText(status) {
   CoordMode, ToolTip, Screen
-  tooltip %status%, 0, 0, 1
+  setTooltip(status, 1)
 }
 
 setStatusText("Stopped")
@@ -89,4 +89,8 @@ secondsToTime(seconds) {
   }
 
   return hoursText . ":" . minutesText . ":" . secondsTime
+}
+
+setTooltip(text, tooltipNumber := 1) {
+  tooltip %text%, 0, (tooltipNumber - 1) * 20, tooltipNumber
 }
