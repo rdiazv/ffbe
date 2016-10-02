@@ -168,7 +168,7 @@ isDailyMissionWindow() {
   PixelGetColor, color1, getScreenX(202), getScreenY(195)
   PixelGetColor, color2, getScreenX(233), getScreenY(604)
 
-  return color1 = 0xB0C001 && color2 = 0xD1E700
+  return color1 = 0xB1C000 && color2 = 0xD1E700
 }
 
 hasConnectionError() {
